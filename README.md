@@ -25,3 +25,7 @@ To regenerate the watermarked data, please use the `generate_watermark.ipynb` no
 ### Experiments
 
 Most work required using web interfaces (e.g. ZeroGPT, GPTZero, ChatGPT), so the full findings are viewable in the `final_data.csv` file and cannot be programatically re-generated (see above section for replication instructions). Nevertheless, the following Python Notebooks include important Exploratory Data Analysis (EDA), supporting experiments, and the watermarking generation and detection infrastructure used for this project: 
+
+1.  `perplexity-eda.ipynb` includes the code used for calculating the perplexity of each text, which uses [this Language Model Perplexity module](https://github.com/asahi417/lmppl#language-model-perplexity-lm-ppl). This notebook also includes the visualizations showing the distribution of perplexity scores and the relationship between perplexity and ZeroGPT "AI %" score.
+2. `semantic-similarity.ipynb` includes the infrastructure for using the [Universal Sentence Encoder](https://www.tensorflow.org/hub/tutorials/semantic_similarity_with_tf_hub_universal_encoder) to generate semantic similarity scores between two texts.
+3. `generate_watermark.ipynb` was used to generate the 212 watermarked GPT Neo essays.
