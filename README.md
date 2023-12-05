@@ -1,5 +1,5 @@
 # DUPE: Detection Undermining via Prompt Engineering for Deepfake Text
-#### James Weichert an Chinecherem Dimobi
+#### James Weichert and Chinecherem Dimobi
 CS 5914 _Fall 2023_
 
 
@@ -18,6 +18,9 @@ The data in `final_data.csv` can be replicated using the following steps:
 2. Use the [ZeroGPT](https://www.zerogpt.com/) and [GPTZero](https://gptzero.me/) web interfaces to evaluate each essay (human or AI), recording the "AI GPT %" and "AI Probability" scores, respectively. This can only be done manually for ZeroGPT, but there is a GPTZero API available for purchase (although we did this step manually for GPTZero as well).
 
 3. Paraphrase the GPT-generated essays using the desired paraphrasing prompt, then repeat step 2.
+
+#### Watermarked Data
+To regenerate the watermarked data, please use the `generate_watermark.ipynb` notebook. Once the watermarked text is generated, it is processed by the detector, which outputs the number of tokens, the number of green list tokens, and the p_values. You can find the results, including the watermarked text and its corresponding detection values, in the `watermark_detect.csv` file. For an essay to be considered as watermarked, its p_value should be greater than 0.05.
 
 ### Experiments
 
